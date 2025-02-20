@@ -4,10 +4,21 @@
  */
 package comandos;
 
+import utileria.BaseTV;
+
 /**
  *
  * @author Beto_
  */
-public class EncenderCmd {
-    
+public class EncenderCmd implements Command{
+    private final BaseTV tv;
+
+    public EncenderCmd(BaseTV tv) {
+      this.tv = tv;
+    }
+
+    @Override
+    public void execute() {
+      tv.encender();
+    }
 }

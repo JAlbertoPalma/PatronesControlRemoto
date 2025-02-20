@@ -4,10 +4,24 @@
  */
 package comandos;
 
+import utileria.BaseTV;
+
 /**
  *
  * @author Beto_
  */
-public class CambiarCanalCmd {
-    
+public class CambiarCanalCmd implements Command{
+    private final BaseTV tv;
+    private final int canal;
+
+    public CambiarCanalCmd(BaseTV tv, int canal) {
+      this.tv = tv;
+      this.canal = canal;
+    }
+
+    @Override
+    public void execute() {
+      tv.cambiarCanal(canal);
+    }
+
 }

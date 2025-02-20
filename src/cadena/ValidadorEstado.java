@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package utileria;
+package cadena;
 
 /**
  *
  * @author Beto_
  */
-public class Command {
+public class ValidadorEstado {
     
 }
