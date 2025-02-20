@@ -12,7 +12,7 @@ public class EstadoApagada implements EstadoTV{
 
     @Override
     public void presionarBotonEncendido() {
-        tv.getInstance().cambiarEstado(new EstadoEncendida());
+        TV.getInstance().cambiarEstado(new EstadoEncendida());
         System.out.println("TV encendida");
     }
 

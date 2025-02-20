@@ -9,5 +9,5 @@ package observador;
  * @author Beto_
  */
 public interface ObservadorTV {
-    
+    void actualizar(boolean encendida);
 }

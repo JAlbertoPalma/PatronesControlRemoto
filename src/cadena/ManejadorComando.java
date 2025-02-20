@@ -4,10 +4,13 @@
  */
 package cadena;
 
+import comandos.Command;
+
 /**
  *
  * @author Beto_
  */
 public interface ManejadorComando {
-    
+    void establecerSiguienteManejador(ManejadorComando siguiente);
+    void manejarComando(Command comando);
 }

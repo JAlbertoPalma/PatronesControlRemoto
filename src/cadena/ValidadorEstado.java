@@ -4,10 +4,23 @@
  */
 package cadena;
 
+import comandos.Command;
+import utileria.TV;
+
 /**
  *
  * @author Beto_
  */
-public class ValidadorEstado {
-    
+public class ValidadorEstado implements ManejadorComando{
+    private ManejadorComando siguiente;
+
+    @Override
+    public void establecerSiguienteManejador(ManejadorComando siguiente) {
+        this.siguiente = siguiente;
+    }
+
+    @Override
+    public void manejarComando(Command comando) {
+        
+    }
 }
