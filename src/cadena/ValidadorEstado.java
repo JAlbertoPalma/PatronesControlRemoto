@@ -21,6 +21,10 @@ public class ValidadorEstado implements ManejadorComando{
 
     @Override
     public void manejarComando(Command comando) {
-        
+        if (TV.getInstance().estaEncendida()) {
+            siguiente.manejarComando(comando);
+        } else {
+            System.out.println("La TV está apagada, no se puede ejecutar el comando");
+        }
     }
 }

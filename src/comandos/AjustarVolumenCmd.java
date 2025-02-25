@@ -23,4 +23,8 @@ public class AjustarVolumenCmd implements Command{
     public void execute() {
       tv.ajustarVolumen(nivel);
     }
+
+    public int getNivel() {
+        return nivel;
+    }
 }

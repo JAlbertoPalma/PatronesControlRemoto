@@ -8,7 +8,7 @@ package observador;
  *
  * @author Beto_
  */
-public class Bocina implements ObservadorTV{
+public class Bocinas implements ObservadorTV{
 
     @Override
     public void actualizar(boolean encendida) {

@@ -4,6 +4,8 @@
  */
 package estado;
 
+import utileria.TV;
+
 /**
  *
  * @author Beto_
@@ -13,12 +15,12 @@ public class EstadoApagada implements EstadoTV{
     @Override
     public void presionarBotonEncendido() {
         TV.getInstance().cambiarEstado(new EstadoEncendida());
-        System.out.println("TV encendida");
+        System.out.println("Se ha encendido la TV");
     }
 
     @Override
     public void presionarBotonCanal(int canal) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("No se puede cambiar canal con la TV apagada");
     }
     
 }

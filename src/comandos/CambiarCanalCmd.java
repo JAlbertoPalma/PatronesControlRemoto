@@ -24,4 +24,7 @@ public class CambiarCanalCmd implements Command{
       tv.cambiarCanal(canal);
     }
 
+    public int getCanal() {
+        return canal;
+    }
 }

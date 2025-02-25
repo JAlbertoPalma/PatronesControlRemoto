@@ -4,7 +4,7 @@
  */
 package cadena;
 
-import comandos.CambiarCanalCmd;
+import comandos.AjustarVolumenCmd;
 import comandos.Command;
 import utileria.TV;
 
@@ -12,7 +12,7 @@ import utileria.TV;
  *
  * @author Beto_
  */
-public class EjecutorCambiarCanal implements ManejadorComando{
+public class EjecutorAjustarVolumen implements ManejadorComando{
     ManejadorComando siguiente;
     
     @Override
@@ -22,13 +22,12 @@ public class EjecutorCambiarCanal implements ManejadorComando{
 
     @Override
     public void manejarComando(Command comando) {
-        if (comando instanceof CambiarCanalCmd) {
-            CambiarCanalCmd comandoCambiarCanal = (CambiarCanalCmd) comando;
-            TV.getInstance().cambiarCanal(comandoCambiarCanal.getCanal());
+        if (comando instanceof AjustarVolumenCmd) {
+            AjustarVolumenCmd comandoAjustarVolumen = (AjustarVolumenCmd) comando;
+            TV.getInstance().ajustarVolumen(comandoAjustarVolumen.getNivel());
         } else if (siguiente != null) {
-            System.out.println("El manejador pasó por el comando cambiar canal");
+            System.out.println("El manejador pasó por el comando ajustar volumen");
             siguiente.manejarComando(comando);
         }
     }
-    
 }
